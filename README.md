@@ -26,6 +26,18 @@ local PlayerSection = PlayerTab:AddSection({
 local PlayerSection = PlayerTab:AddSection({
 	Name = "Discord: https://discord.gg/BPyJRUbPM3"
 })
+PlayerSection:AddButton({
+	Name = "Rejoin Server",
+	Callback = function()
+		local ts = game:GetService("TeleportService")
+
+		local p = game:GetService("Players").LocalPlayer
+		
+		 
+		
+		ts:Teleport(game.PlaceId, p)
+	  	end    
+})
 
 PlayerSection:AddButton({
 	Name = "ServerHop (if u stuck)",
@@ -106,24 +118,7 @@ PlayerSection:AddButton({
 })
 
 
-PlayerSection:AddButton({
-	Name = "ServerHop (if u stuck)",
-	Callback = function()
-		OrionLib:MakeNotification({
-			Name = "Delux#6666 Menu",
-			Content = "Please, Wait 5 seconds",
-			Image = "rbxassetid://4483345998",
-			Time = 5
-		})
-	wait(5)
-	local ts = game:GetService("TeleportService")
 
-local p = game:GetService("Players").LocalPlayer
-
- 
-
-ts:Teleport(game.PlaceId, p)
-})
 --Player Tab End--
 
 --Settings Tab--
