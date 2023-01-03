@@ -118,6 +118,60 @@ PlayerSection:AddButton({
 })
 
 
+PlayerSection:AddButton({
+	Name = "Clear inv (Takes Like 1-3 min)",
+	Callback = function()
+		local args = {
+			[1] = "LoadFruit",
+			[2] = "Chop-Chop"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(2)
+		
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		
+		wait(2)
+		
+		local args = {
+			[1] = "LoadFruit",
+			[2] = "Revive-Revive"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(1)
+		
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		
+		wait(2)
+		
+		local args = {
+			[1] = "LoadFruit",
+			[2] = "Kilo-Kilo"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(1)
+		
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		
+		wait(2)
+		
+		local args = {
+			[1] = "LoadFruit",
+			[2] = "Diamond-Diamond"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(1)
+		
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+		
+		wait(2)
+				
+	  	end    
+})
+
 
 --Player Tab End--
 
