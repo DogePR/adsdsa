@@ -127,11 +127,11 @@ PlayerSection:AddButton({
 		}
 		
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
-		wait(2)
+		wait(1)
 		
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 		
-		wait(2)
+		wait(5)
 		
 		local args = {
 			[1] = "LoadFruit",
@@ -143,7 +143,7 @@ PlayerSection:AddButton({
 		
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 		
-		wait(2)
+		wait(5)
 		
 		local args = {
 			[1] = "LoadFruit",
@@ -155,7 +155,7 @@ PlayerSection:AddButton({
 		
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 		
-		wait(2)
+		wait(6)
 		
 		local args = {
 			[1] = "LoadFruit",
@@ -167,8 +167,17 @@ PlayerSection:AddButton({
 		
 		game.Players.LocalPlayer.Character.Humanoid.Health = 0
 		
-		wait(2)
-				
+		wait(5)
+		
+		local args = {
+			[1] = "LoadFruit",
+			[2] = "Smoke-Smoke"
+		}
+		
+		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(unpack(args))
+		wait(1)
+		game.Players.LocalPlayer.Character.Humanoid.Health = 0
+wait(2)
 	  	end    
 })
 
